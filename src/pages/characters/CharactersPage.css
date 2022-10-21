@@ -1,7 +1,22 @@
-.characters-wrapper {
-	display: flex;
-	width: 100%;
-    flex-wrap: wrap;
-    gap: 15px;
+.characters-page {
+    margin-bottom: 20px;
+}
+
+.characters-title {
+
+}
+
+.characters-count {
+
+}
+
+.characters {
+    /* max-width: 1560px; */
+    /* margin: 0 auto; */
+    display: flex;
     justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    
 }

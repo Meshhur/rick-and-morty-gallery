@@ -1,20 +1,17 @@
 .character-card {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	border: 2px solid #000;
 	border-radius: 20px;
-	width: 340px;
+	width: 500px;
 }
 .character-card__image {
-	width: 150px;
+	width: 50%;
 	border-radius: 17px 0 0 17px;
 }
 .character-card__info {
 	display: flex;
 	flex-direction: column;
-	padding: 0 10px;
-}
-.character-card__data {
-	font-weight: bold;
+	font-size: 1.3rem;
+	padding: 0 10px;	
 }

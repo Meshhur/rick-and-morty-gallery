@@ -1,5 +1,5 @@
 {
-  "name": "axios",
+  "name": "rick-and-morty-gallery",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
