@@ -1,0 +1,97 @@
+:root {
+    --orange: #ff0000;
+    --green: #18b201;
+    --blue: #0456c8;
+    --ring-gray: rgba(254, 255, 255, 0.3);
+    --text-gray: #737373;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 2px 4px 3px var(--orange);
+    }
+
+    20% {
+        transform: rotate(72deg);
+        box-shadow: 2px 4px 200px white;
+    }
+
+    40% {
+        transform: rotate(144deg);
+        box-shadow: 2px 4px 3px var(--green);
+    }
+
+    60% {
+        transform: rotate(216deg);
+        box-shadow: 2px 4px 3px rgb(0, 204, 255);
+    }
+
+    80% {
+        transform: rotate(288deg);
+        box-shadow: 2px 4px 3px var(--blue);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 2px 4px 3px var(--orange);
+    }
+}
+
+@keyframes text-color {
+    0% {
+        color: var(--blue);
+    }
+
+    25% {
+        color: red;
+    }
+
+    50% {
+        color: white;
+    }
+
+    75% {
+        color: black;
+    }
+
+    100% {
+        color: var(--blue);
+    }
+}
+
+
+.loading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loading-ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.loading-ring::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--ring-gray);
+    animation: ring 3s linear infinite;
+}
+
+.loading-text {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+
+    animation: text-color 3.5s linear infinite;
+}

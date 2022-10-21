@@ -6,8 +6,16 @@ body {
     margin: 0;
     padding: 0;
     /* height: 100vh; */
+    background-color: black;
+    color: white;
+
 }
 
 button {
     cursor: pointer;
+}
+
+a {
+ text-decoration: none;
+ color: white;   
 }

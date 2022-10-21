@@ -1,30 +1,36 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "../../components/Card/Card";
+import { Loader } from '../../components/loader/Loader';
 import { Link } from "react-router-dom";
 import "./CharactersPage.css";
 
-const getCardLink = (id, name, gender, image) => (
-    `/characters:${id}?name=${name}&gender=${gender}&image=${image}`
+const getCardLink = (card) => (
+    `/characters:${card.id}?card=${JSON.stringify(card)}`
 )
 
 export const CharactersPage = () => {
 
+    const [isLoading, setIsloading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1)
     const [characters, setCharacters] = useState(null);
 
     useEffect(() => {
+        setIsloading(true)
         axios({
             method: "get",
             url: `https://rickandmortyapi.com/api/character/?page=${currentPage}`
-        }).then(res => setCharacters(res.data))
+        }).then(res => {
+            setIsloading(false);
+            setCharacters(res.data)
+        })
     }, [currentPage]);
 
     const getFirstPage = () => setCurrentPage(1);
 
-    const getPrevPage = () => {if(currentPage !== 1) setCurrentPage(currentPage - 1)};
+    const getPrevPage = () => { if (currentPage !== 1) setCurrentPage(currentPage - 1) };
 
-    const getNextPage = () => {if(currentPage !== characters?.info?.pages) setCurrentPage(currentPage + 1)};   
+    const getNextPage = () => { if (currentPage !== characters?.info?.pages) setCurrentPage(currentPage + 1) };
 
     const getLastPage = () => setCurrentPage(characters.info.pages);
 
@@ -33,18 +39,23 @@ export const CharactersPage = () => {
             <span className="characters-title">
                 Characters page
             </span>
+            
             <div className="characters-count">
                 <span>Characters count: </span>
                 <span>{characters?.info?.count}</span>
             </div>
             <div className="characters">
-                {characters?.results?.map((card, index) => (
-                    <Link to={getCardLink(card.id, card.name, card.gender, card.image)}>
+                {isLoading ? (
+                    <Loader />
+                ) : characters?.results?.map((card, index) => (
+                    <Link to={getCardLink(card)}>
                         <Card
+                            key={index}
                             id={card.id}
                             name={card.name}
                             gender={card.gender}
-                            image={card.image} key={index} />
+                            image={card.image}
+                        />
                     </Link>
                 ))}
             </div>
