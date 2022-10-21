@@ -61,7 +61,7 @@ export const CharactersPage = () => {
             </div>
             <div className="pagination">
                 <h2 className="current-page">
-                    {currentPage}
+                    Current page: {currentPage}
                 </h2>
                 <div className="buttons">
                     <button className="pag-btn" onClick={getFirstPage} disabled={characters ? false : true} >First page</button>
@@ -70,7 +70,7 @@ export const CharactersPage = () => {
                     <button className="pag-btn" onClick={getLastPage} disabled={characters ? false : true} >Last page</button>
                 </div>
                 <h2 className="pages-count">
-                    {characters?.info?.pages}
+                    Pages: {characters?.info?.pages}
                 </h2>
             </div>
         </div>

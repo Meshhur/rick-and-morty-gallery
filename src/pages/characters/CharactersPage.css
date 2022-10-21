@@ -1,13 +1,20 @@
 .characters-page {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
 }
 
 .characters-title {
-
+    font-size: 55px;
+    /* color: rgb(32, 35, 41); */
+    color: var(--main);
 }
 
 .characters-count {
-
+    color: white;
+    font-size: xx-large;
 }
 
 .characters {
@@ -20,3 +27,59 @@
     flex-wrap: wrap;
     
 }
+
+.pagination {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1020px;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.pag-btn {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .pag-btn:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .pag-btn:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .pag-btn {
+      font-size: 1.3rem;
+      padding: .70rem 1.9rem;
+    }
+  }

@@ -2,12 +2,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main: rgb(254, 153, 1);
+}
+
 body {
     margin: 0;
     padding: 0;
     /* height: 100vh; */
-    background-color: black;
-    color: white;
+    background: rgb(33, 34, 43);
+    color: var(--main);
 
 }
 
@@ -16,6 +20,6 @@ button {
 }
 
 a {
- text-decoration: none;
- color: white;   
+    text-decoration: none;
+    color: var(--main);
 }
