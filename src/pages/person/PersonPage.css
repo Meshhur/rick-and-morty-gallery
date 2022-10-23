@@ -1,0 +1,89 @@
+.persons-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.persons-page-title {
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+.person-card {
+    display: flex;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    column-gap: 30px;
+    /* justify-content: space-between;
+    width: 1000px; */
+}
+
+.person-photo {
+    width: 350px;
+}
+
+.person-info {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-wrap {
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.row-value {
+    color: rgb(4 255 0);
+    letter-spacing: 1px;
+}
+
+
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+/* button styling */
+.back-button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.back-button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}

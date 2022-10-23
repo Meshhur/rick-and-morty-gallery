@@ -4,6 +4,7 @@
 
 :root {
     --main: rgb(254, 153, 1);
+    --animation-color: #37FF8B;
 }
 
 body {
@@ -15,7 +16,16 @@ body {
 
 }
 
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+
 button {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    border: none;
     cursor: pointer;
 }
 
