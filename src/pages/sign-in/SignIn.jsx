@@ -4,12 +4,15 @@ import "./SignIn.css";
 
 export const SignIn = () => {
     return (
-        <main className="sign-in">
-            <div className="sign-in-card">
-                <Input className="sign-in-username inputbox" value="Username"/>
-                <Input className="sign-in-userpassword inputbox" value="Password"/>
-                <Button className="sign-in-button btn" value="S i g n I n" />
+        <main className="signIn">
+            <h1 className="signIn-title">
+                Sign in to Rick and Morty gallery
+            </h1>
+            <div className="signIn-card">
+                <Input className="signIn-input inputbox" value="Username" />
+                <Input className="signIn-input inputbox" value="Password" />
+                <Button className="signIn-button btn" value="S i g n I n" />
             </div>
-        </main>
+        </main >
     );
 };

@@ -3,7 +3,7 @@
     width: 196px;
 }
 
-.inputbox input {
+.inputbox .input {
     position: relative;
     width: 100%;
     padding: 20px 10px 10px;
@@ -29,8 +29,8 @@
     pointer-events: none;
 }
 
-.inputbox input:valid~span,
-.inputbox input:focus~span {
+.inputbox .input:valid~span,
+.inputbox .input:focus~span {
     color: #45f3ff;
     transform: translateX(-10px) translateY(-34px);
     font-size: 0, 75em;
@@ -49,7 +49,7 @@
     z-index: 9;
 }
 
-.inputbox input:valid~i,
-.inputbox input:focus~i {
+.inputbox .input:valid~i,
+.inputbox .input:focus~i {
     height: 44px;
 }
