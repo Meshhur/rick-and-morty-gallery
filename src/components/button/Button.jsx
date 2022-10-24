@@ -1,8 +1,8 @@
 import "./Button.css";
-export const Button = ({className ,value}) => {
+export const Button = ({...props}) => {
     return (
-        <button className={className}>
-            {value}
+        <button onClick={props.onClick} className={props.className}>
+            {props.value}
             <div id="clip">
                 <div id="leftTop" className="corner"></div>
                 <div id="rightBottom" className="corner"></div>

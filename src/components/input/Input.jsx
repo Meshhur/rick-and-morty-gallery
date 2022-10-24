@@ -1,10 +1,10 @@
 import "./Input.css";
 
-export const Input = ({className ,value}) => {
+export const Input = ({...props}) => {
     return (
-        <div className={className}>
-            <input className="input" required="required" type="text" />
-            <span>{value}</span>
+        <div className={props.className}>
+            <input onChange={props.onChange} className="input" value={props.inpValue} required="required" type={props.type} />
+            <span>{props.value}</span>
             <i></i>
         </div>
     )
