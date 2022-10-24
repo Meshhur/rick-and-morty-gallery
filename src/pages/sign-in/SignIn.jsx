@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../components/button/Button";
+import { Button } from "../../components/buttons/btn1/Button";
 import { Input } from "../../components/input/Input";
 import { toast, Toaster } from "react-hot-toast";
 import "./SignIn.css";

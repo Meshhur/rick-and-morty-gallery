@@ -1,0 +1,17 @@
+::selection {
+    color: rgb(81, 255, 0);
+    background: rgb(32, 35, 41);
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+
+.head-ph {
+    width: 200px;
+}
+
