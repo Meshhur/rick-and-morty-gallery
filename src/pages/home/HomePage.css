@@ -3,15 +3,74 @@
     background: rgb(32, 35, 41);
 }
 
+.main {
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 18px 0;
+}
+
+.head-content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid white;
 }
 
 .head-ph {
     width: 200px;
 }
 
+.head-title {
+    font-size: 44px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.about {
+    width: 100%;
+    margin: 0 0 40px 0;
+}
+
+.about-txt {
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.all-characters {
+    color: aqua;
+    font-size: large;
+    text-decoration: 2px underline;
+}
+
+.signUp_and_signIn {
+    width: 100%;
+    text-align: right;
+}
+
+.footer {
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    margin-top: 40px;
+}
+
+.created {
+    color: rgb(156, 156, 156);
+}
+
+.author {
+    color: white;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-decoration: underline rgb(255, 152, 0);
+}
