@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Card } from "../../components/Card/Card";
 import { Loader } from '../../components/loader/Loader';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button2 } from "../../components/buttons/btn2/Button2";
 import "./CharactersPage.css";
 
 const getCardLink = (card) => (
@@ -26,6 +27,9 @@ export const CharactersPage = () => {
         })
     }, [currentPage]);
 
+    const navigate = useNavigate()
+    const goToHomePage = () => {navigate("/")}
+
     const getFirstPage = () => setCurrentPage(1);
 
     const getPrevPage = () => { if (currentPage !== 1) setCurrentPage(currentPage - 1) };
@@ -39,11 +43,11 @@ export const CharactersPage = () => {
             <span className="characters-title">
                 Characters page
             </span>
-            
             <div className="characters-count">
                 <span>Characters count: </span>
                 <span>{characters?.info?.count}</span>
             </div>
+            <Button2 className="btn2" value="Home" onClick={goToHomePage}/>
             <div className="characters">
                 {isLoading ? (
                     <Loader />

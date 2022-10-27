@@ -3,10 +3,6 @@
     background: rgb(32, 35, 41);
 }
 
-.main {
-
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -49,19 +45,42 @@
 }
 
 .all-characters {
-    color: aqua;
+    color: white;
     font-size: large;
-    text-decoration: 2px underline;
+    text-decoration: underline rgb(255, 152, 0);
+    transition: all .3s ease-in-out;
+}
+
+.all-characters:hover {
+    color: rgb(81, 255, 0);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
 }
 
 .signUp_and_signIn {
-    width: 100%;
     text-align: right;
 }
 
 .footer {
     border-top: 2px solid rgba(255, 255, 255, 0.15);
     margin-top: 40px;
+}
+
+.f-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+}
+
+.follow {
+    color: rgb(156, 156, 156);
+    margin: 20px 0 0 0;
+}
+
+.accounts {
+    margin-bottom: 16px;
 }
 
 .created {
@@ -73,4 +92,11 @@
     font-size: 17px;
     letter-spacing: 1px;
     text-decoration: underline rgb(255, 152, 0);
+    transition: all .3s ease-in-out;
+}
+
+.author:hover {
+    color: rgb(255, 152, 0);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
 }
