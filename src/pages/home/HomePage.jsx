@@ -1,23 +1,25 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button2 } from "../../components/buttons/btn2/Button2";
 import "./HomePage.css";
+import { observer } from "mobx-react-lite";
+import { Context } from "../../index.js";
 
-export const HomePage = () => {
-
+export const HomePage = observer(() => {
+    const {users} = useContext(Context)
     const navigate = useNavigate();
     useEffect(() => {
         const credentials = localStorage.getItem('credentials');
         if (!credentials) {
-            navigate('/sign-up')
+            navigate('/sign-in')
         }
     }, [])
-
+    console.log(users.users);
     const logOut = () => {
         localStorage.removeItem('credentials');
         navigate('/sign-up');
     }
-
+    const currentDate = new Date().getFullYear()
     return (
         <main className="main">
             <header className="header">
@@ -60,10 +62,10 @@ export const HomePage = () => {
                         </a>
                     </div>
                     <span className="created">
-                        created by <a target="_blank" className="author" href="https://github.com/Meshhur">Meshhur</a> 2022
+                        created by <a target="_blank" className="author" href="https://github.com/Meshhur">Meshhur</a> {currentDate}
                     </span>
                 </div>
             </footer>
         </main>
     );
-};
+});

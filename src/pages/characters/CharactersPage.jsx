@@ -5,12 +5,13 @@ import { Loader } from '../../components/loader/Loader';
 import { Link, useNavigate } from "react-router-dom";
 import { Button2 } from "../../components/buttons/btn2/Button2";
 import "./CharactersPage.css";
+import { observer } from "mobx-react-lite";
 
 const getCardLink = (card) => (
     `/characters:${card.id}?card=${JSON.stringify(card)}`
 )
 
-export const CharactersPage = () => {
+export const CharactersPage = observer(() => {
 
     const [isLoading, setIsloading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1)
@@ -52,9 +53,9 @@ export const CharactersPage = () => {
                 {isLoading ? (
                     <Loader />
                 ) : characters?.results?.map((card, index) => (
-                    <Link to={getCardLink(card)}>
+                    <Link key={index} to={getCardLink(card)}>
                         <Card
-                            key={index}
+                            
                             id={card.id}
                             name={card.name}
                             gender={card.gender}
@@ -79,4 +80,4 @@ export const CharactersPage = () => {
             </div>
         </div>
     )
-}
+})
